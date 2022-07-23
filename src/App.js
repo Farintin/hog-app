@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+import './App.css'
+import Header from './layout/Header'
+import Home from './pages/Home'
+
+import { ThemeProvider } from '@mui/material/styles'
+import { theme } from './styles'
+import { Box } from '@mui/system'
+import { useRef } from 'react';
+
+import {Helmet} from "react-helmet";
+
+
+
+
 
 function App() {
+  const appContainer = useRef(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+      <Helmet>
+          <meta charSet="utf-8" />
+          <title>Hog</title>
+          <meta name="description" content="Hog application" />
+      </Helmet>
+
+      <Box id="App">
+        <Box className="wrapper" ref={appContainer}>
+          <Header/>
+          <Home appContainer={appContainer} />
+        </Box>
+      </Box>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App

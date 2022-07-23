@@ -1,0 +1,36 @@
+.blurred {
+    background-color: rgba(255, 255, 255, 10%);
+}
+.blurred .textSearch, .blurred .voiceSearch {
+    color: #fff;
+    cursor: pointer;
+}
+.focused {
+    background-color: rgba(255, 255, 255, 100%);
+}
+.focused .textSearch, .focused .voiceSearch {
+    color: #4cae4c;
+    cursor: pointer;
+}
+
+
+
+.invisible {
+    background-color: rgba(255, 255, 255, 0%)!important;
+}
+.invisible .suggestion {
+    opacity: 0;
+}
+.hide .suggestion {
+    display: none;
+}
+.show {
+    background-color: rgba(205, 205, 205, 90%);
+}
+
+
+
+.button .secondary {
+    font-size: 12px;
+    font-weight: 500;
+}
