@@ -1,0 +1,16 @@
+.focused .icon {
+    color: #00a44e!important;/*#00a54f*/
+}
+
+.clearIconWrapper {
+    display: none!important;
+}
+.showClearIcon .clearIconWrapper {
+    display: flex!important;
+}
+.showClearIcon.focused .icon.clearIcon {
+    color: #555!important;
+}
+.showClearIcon .icon.clearIcon {
+    color: #eee!important;
+}
