@@ -1,11 +1,28 @@
 {
   "short_name": "hog",
+<<<<<<< HEAD
   "name": "Hogme React App Sample",
+=======
+  "name": "Create React App Sample",
+>>>>>>> e25a6c8374dcf2388582ba72f88a3059f8483d2d
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+<<<<<<< HEAD
+=======
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+>>>>>>> e25a6c8374dcf2388582ba72f88a3059f8483d2d
     }
   ],
   "start_url": ".",

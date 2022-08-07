@@ -5,6 +5,7 @@ import { createTheme } from '@mui/material/styles'
 const theme = createTheme({
     palette: {
         primary: {
+<<<<<<< HEAD
             lighter: '#edfff5',
             light: '#a4ffd0',//'#00c35e'
             main: '#00a44e',//'#00a54f'
@@ -20,6 +21,15 @@ const theme = createTheme({
         },
         text: {
             primary: '#fff'
+=======
+            main: '#00000000'
+        },
+        secondary: {
+            main: '#5cb85c'
+        },
+        text: {
+            primary: '#eeeeee'
+>>>>>>> e25a6c8374dcf2388582ba72f88a3059f8483d2d
         }
     },
     shape: {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useContext, Fragment } from 'react'
 import { List, ListItemIcon, ListItemText, ListItemButton, Typography, Box } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles'
@@ -40,10 +41,18 @@ const Indicator = styled(Box)(({ theme }) => ({
 }))
 
 
+=======
+import { List, ListItemIcon, ListItemText, ListItemButton } from '@mui/material';
+import { alpha } from '@mui/material/styles';
+import SearchIcon from '@mui/icons-material/Search';
+
+import style from './AutocompleteSearchBar.module.css';
+>>>>>>> e25a6c8374dcf2388582ba72f88a3059f8483d2d
 
 
 
 export default function(props) {
+<<<<<<< HEAD
   const suggestion = props.suggestion
   const [activeSuggestIndex, setActiveSuggestIndex] = useContext(AutocompleteContext).useSuggestIndexState
 
@@ -76,6 +85,25 @@ export default function(props) {
               </Typography>
             </ListTxt>
           </StyledListItemButton>
+=======
+  return (
+    <List dense={true} className={style.suggestion} sx={{ mb: 2 }}>
+      {props.suggestion.map((item, index) => {
+        const value = item.label;
+        return (
+          <ListItemButton key={index} onClick={() => props.onClickHandler(value)} sx={{ 
+            px: 4, 
+            borderStyle: 'solid', 
+            borderColor: `${index === 0 ? '#4cae4c' : 'transparent'}`, 
+            borderLeftWidth: 4, 
+            backgroundColor: `${index === 0 ? alpha('#000', 0.05) : 'transparent'}`
+          }}>
+            <ListItemIcon sx={{ minWidth: 30 }}>
+              <SearchIcon sx={{ fontSize: 16, color: '#000000'}} />
+            </ListItemIcon>
+            <ListItemText primary={value} secondary={null} />
+          </ListItemButton>
+>>>>>>> e25a6c8374dcf2388582ba72f88a3059f8483d2d
         )
       })}
     </List>
