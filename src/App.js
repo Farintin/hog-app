@@ -5,7 +5,7 @@ import SearchResult from './pages/SearchResult'
 
 import { ThemeProvider } from '@mui/material/styles'
 import { theme } from './styles'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 import './App.css'
 
@@ -24,7 +24,9 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/site/searchresult' element={<SearchResult />} />
+        <Route path='site'>
+          <Route path='searchresult' element={<SearchResult />} />
+        </Route>
       </Routes>
 
     </ThemeProvider>
