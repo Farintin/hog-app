@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
-import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Divider, Typography } from '@mui/material'
-import { Home, Business, Reviews, Call, LiveHelp, Work, Info } from '@mui/icons-material'
+import { NavLink } from 'react-router-dom'
+import { List, ListItem, ListItemButton, ListItemIcon, Typography } from '@mui/material'
+import { Home, Business, Reviews, Call, LiveHelp, Info } from '@mui/icons-material'
 import { styled } from '@mui/material/styles'
 
 
@@ -10,39 +11,55 @@ import { styled } from '@mui/material/styles'
 const menuData = [
     {
         icon: <Home/>, 
-        label: 'Home'
-    },
-    {
-        icon: <Info/>, 
-        label: 'About'
-    },
-    {
-        icon: <Reviews/>, 
-        label: 'Reviews'
+        label: 'Home',
+        href: ''
     },
     {
         icon: <Business/>, 
-        label: 'Business'
+        label: 'Business',
+        href: 'services'
     },
     {
-        icon: <LiveHelp/>, 
-        label: 'FAQ'
+        icon: <Info/>, 
+        label: 'About',
+        href: 'about'
     },
+    /*{
+        icon: <LiveHelp/>, 
+        label: 'FAQ',
+        href: ''
+    },
+    {
+        icon: <Reviews/>, 
+        label: 'Reviews',
+        href: ''
+    },*/
     {
         icon: <Call/>, 
-        label: 'Contact'
+        label: 'Contact',
+        href: 'contact'
     }
 ]
 
 const StyledList = styled(List)(({ theme }) => ({
-  color: theme.palette.primary.main,
+  color: `${theme.palette.primary.lighter}!important`,
+  '& .link': {
+    width: '100%',
+    color: `${theme.palette.primary.lighter}!important`,
+    textDecoration: 'none'
+  },
+  '& .label': {
+    fontWeight: 600,
+    fontSize: 15,
+    letterSpacing: .6,
+  }
 }))
 const StyledListItemButton = styled(ListItemButton)(({ theme }) => ({
   color: 'inherit',
   borderRadius: 8,
   '&:hover': {
-    color: theme.palette.secondary.dark,
-    backgroundColor: theme.palette.secondary.lighter
+    backgroundColor: theme.palette.primary.light,
+    color: '#fff',//theme.palette.secondary.dark
   }
 }))
 const StyledListItemIcon = styled(ListItemIcon)(({ theme }) => ({
@@ -58,20 +75,17 @@ export default function() {
                 return (
                     <Fragment key={i}>
                         <ListItem sx={{ py: 1, px: 0 }}>
-                            <StyledListItemButton>
-                                <StyledListItemIcon>
-                                {item.icon}
-                                </StyledListItemIcon>
-                                <Typography  
-                                    sx={{
-                                        fontWeight: 500,
-                                        fontSize: 16,
-                                        letterSpacing: .6
-                                    }}
-                                >
-                                    {item.label}
-                                </Typography>
-                            </StyledListItemButton>
+                            <NavLink 
+                                className='link'
+                                to={item.href}  
+                            >
+                                <StyledListItemButton>
+                                    <StyledListItemIcon>{item.icon}</StyledListItemIcon>
+                                    <Typography className='label' sx={{ ml: '5%' }}>
+                                        {item.label}
+                                    </Typography>
+                                </StyledListItemButton>
+                            </NavLink>
                         </ListItem>
                     </Fragment>
                 )

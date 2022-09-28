@@ -1,6 +1,5 @@
 import { Fragment, useState } from 'react'
-import { Box, IconButton, Button, Typography, SwipeableDrawer, Divider } from '@mui/material'
-import ChevronRightIcon from '@mui/icons-material/ChevronRight'
+import { Box, Button, Typography, SwipeableDrawer } from '@mui/material'
 import { alpha, styled } from '@mui/material/styles'
 
 import Header from '../components/HomeHeader'
@@ -18,7 +17,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
   borderRadius: 8,
   width: '100%',
   '&:hover': {
-    backgroundColor: theme.palette.secondary.dark
+    backgroundColor: theme.palette.secondary.main
   } 
 }))
 
@@ -44,47 +43,25 @@ export default function SwipeableTemporaryDrawer() {
     }
     setState({ ...state, [anchor]: open })
   }
-  const list = (anchor) => (
-    <Box 
-      sx={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        height: 1
-      }}
-    >
-      <Box 
-        sx={{ 
-          display: 'flex', 
-          p: 1, 
-          px: 1
-        }}
-      >
-        <IconButton onClick={toggleDrawer(anchor, false)}>
-          <ChevronRightIcon/>
-        </IconButton>
-      </Box>
-      <Divider 
-        sx={{
-          borderColor: alpha('#000', 0)
-        }}
-      />
 
+  const list = (anchor) => (
+    <Box className='bg' sx={{ display: 'flex', flexDirection: 'column', height: 1 }}>
       <Box
         sx={{ 
           width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 290, 
           height: 1, 
           display: 'flex', 
           flexDirection: 'column', 
-          px: 3, 
-          mt: 4
+          justifyContent: 'center',
+          px: 4
         }}
         role="presentation"
-        onClick={toggleDrawer(anchor, false)}
-        onKeyDown={toggleDrawer(anchor, false)}
+        //onClick={toggleDrawer(anchor, false)}
+        //onKeyDown={toggleDrawer(anchor, false)}
       >
         <SideMenuList />
       </Box>
-      <Box sx={{ display: 'flex', justifyContent: 'flex-start', p: 2, px: 4 }}>
+      <Box sx={{ display: 'flex', justifyContent: 'flex-start', py: 4, px: 4 }}>
         <StyledButton onClick={toggleDrawer(anchor, false)}>
           <Typography>Get Started</Typography>
         </StyledButton>
@@ -102,6 +79,14 @@ export default function SwipeableTemporaryDrawer() {
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
             onOpen={toggleDrawer(anchor, true)}
+            sx={{
+              '& .MuiBackdrop-root': {
+                bgcolor: alpha('#000', .45)
+              },
+              '& .MuiPaper-root': {
+                bgcolor: alpha('#fff', .12)
+              },
+            }}
           >
             {list(anchor)}
           </SwipeableDrawer>

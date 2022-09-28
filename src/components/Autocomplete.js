@@ -13,7 +13,7 @@ import { SearchContext } from './SearchSection'
 
 
 const Autocomplete = styled(Box)(({ theme }) => ({
-    borderRadius: theme.shape.borderRadius/2 - 8,
+    borderRadius: 64/2 - 8,
     width: 700,
     [theme.breakpoints.down('md')]: {
       width: '60vw'

@@ -84,7 +84,7 @@ const StyledStack = styled(Stack)(({ theme }) => ({
 }));
 
 const StyledButton = styled(Button)(({ theme }) => ({
-  borderRadius: '6px!important',
+  borderRadius: '16px!important',
   margin: '8px!important',
   textTransform: 'capitalize!important',
   fontWeight: '700!important',

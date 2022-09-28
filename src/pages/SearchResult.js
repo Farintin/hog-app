@@ -1,4 +1,3 @@
-import Header from '../layout/Header'
 import { Container, Box, Typography } from '@mui/material'
 import SearchEngineTwoColor from '../components/icons/SearchEngineTwoColor'
 import SmileyFaceMonochromatic from '../components/icons/SmileyFaceMonochromatic'
@@ -40,7 +39,6 @@ export default function(props) {
       }}
     >
       <Box className="wrapper">
-        <Header/>
         <Container 
             sx={{ 
               display: 'flex', 

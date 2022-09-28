@@ -26,22 +26,22 @@ const StyledStack = styled(Stack)(({ theme }) => ({
     }
 }))
 const SubmitBtn = styled(Button)(({ theme }) => ({
-    borderRadius: '8px!important',
+    borderRadius: '12px!important',
     margin: '8px!important',
     textTransform: 'capitalize!important',
     fontWeight: '700!important',
     fontSize: '18px!important',
-    backgroundColor: theme.palette.primary.main,
-    color: '#ffffff!important',
+    backgroundColor: theme.palette.primary.dark,
+    color: '#fff!important',
     borderWidth: 2, 
     borderStyle: 'solid', 
-    borderColor: theme.palette.primary.dark,
+    borderColor: theme.palette.primary.darker,
     width: '180px!important',
     minWidth: '150px',
     height: 80,
     flexDirection: 'column',
     '&:hover': {
-      backgroundColor: theme.palette.secondary.dark,//theme.palette.primary.darker
+      backgroundColor: theme.palette.secondary.darker,
       borderColor: theme.palette.secondary.light,
       borderWidth: 2
     },
@@ -64,7 +64,7 @@ const SubmitBtnSecondTxt = styled(Typography)(({ theme }) => ({
 const SearchContext = createContext()
 
 function SearchSection (props) {
-    const searchPlaceholder = 'How are You...'
+    const searchPlaceholder = 'How are You!...'
     const [searchText, setSearchText] = useState(searchPlaceholder)
     const navigate = useNavigate()
 
@@ -79,7 +79,7 @@ function SearchSection (props) {
             <SearchContext.Provider 
                 value={[searchText, setSearchText]}
             >
-                <AutocompleteSearch suggestionData={props.suggestionData} placeholde={searchPlaceholder} />
+                <AutocompleteSearch suggestionData={props.suggestionData} placeholder={searchPlaceholder} />
                 <SubmitBtns>
                     <StyledStack direction={{ xs: 'column', md: 'row' }}>
                         <SubmitBtn 
