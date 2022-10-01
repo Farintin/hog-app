@@ -64,7 +64,7 @@ const SubmitBtnSecondTxt = styled(Typography)(({ theme }) => ({
 const SearchContext = createContext()
 
 function SearchSection (props) {
-    const searchPlaceholder = 'How are You!...'
+    const searchPlaceholder = 'How are You?'
     const [searchText, setSearchText] = useState(searchPlaceholder)
     const navigate = useNavigate()
 

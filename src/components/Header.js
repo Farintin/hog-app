@@ -30,14 +30,7 @@ const MenuIcon = styled(Menu)(({theme}) => ({
     fontSize: 26
 }))*/
 const BrandLogo = styled('img')(({theme}) => ({
-    width: 42,
-    [theme.breakpoints.down('md')]: {
-      width: 80,
-      marginBottom: 0
-    },
-    [theme.breakpoints.down('sm')]: {
-      width: 70
-    }
+    width: 54
 }))
 
 
@@ -155,23 +148,10 @@ export default function({ toggleHandler, anchor}) {
     }
 
     return (
-        <NavBar ref={navbar} id='header' sx={{ boxShadow: 0, py: 2.25 }}>
+        <NavBar ref={navbar} id='header' sx={{ boxShadow: 0, py: 1.5 }}>
             <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <a href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-                    <BrandLogo src="/logo/hog_logo_gold_titleless_w-50.png" />
-                    <Typography 
-                        sx={{ 
-                            fontSize: '130%', 
-                            fontWeight: 700, 
-                            fontFamily: 'Product Sans!important', 
-                            color: '#fff',//#656565',//'#f8e9c4', 
-                            lineHeight: '85%',
-                            letterSpacing: -3,
-                            ml: -.5
-                        }}
-                    >
-                        H<span style={{ fontSize: '130%', color: '#ead298' }}>O</span>G
-                    </Typography>
+                    <BrandLogo src="/logo/hog_logo_gold_titleless_w-100.png" />
                 </a>
                 
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>                    

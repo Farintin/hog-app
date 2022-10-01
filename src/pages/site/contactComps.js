@@ -33,7 +33,7 @@ const Contact = styled(Container)(({theme}) => ({
           padding: '0 32px'
         },
         '&.col-1': {
-          paddingRight: 64,
+          paddingRight: 150,
           '& > .wrapper': {
             '& > *': {
               margin: '18px 0'

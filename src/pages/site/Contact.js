@@ -33,6 +33,7 @@ export default function() {
       <Hero
         image='/img/robot-handshake-human.jpg'
         pageName='contact'
+        pageNameClasses='bottom left'
         contentPosition='center'
       >
         <Box className='wrapper'>
@@ -65,11 +66,24 @@ export default function() {
                   Get in touch
                 </Typography>
 
-                <Typography className='text'>
-                  Due to COVID-19, our team are working remotely. 
+                {/*<Typography className='text'>
+                  Our team are working remotely. 
                   Please email us or request a callback.
-                </Typography>
+            </Typography>*/}
 
+                <Box className='row'>
+                  <Typography className='heading'>
+                    email
+                  </Typography>
+                  <Box>
+                    <Typography className='text'>
+                      <span className='highlight'>info@hogme.life </span>
+                    </Typography>
+                    <Typography className='text'>
+                      <span className='highlight'>partner@hogme.life </span>
+                    </Typography>
+                  </Box>
+                </Box>
                 <Box className='row'>
                   <Typography className='heading'>
                     Phone
@@ -82,26 +96,11 @@ export default function() {
                 </Box>
                 <Box className='row'>
                   <Typography className='heading'>
-                    email
-                  </Typography>
-                  <Box>
-                    <Typography className='text'>
-                      <span className='highlight'>info@hogme.life </span>
-                      (enquiries)
-                    </Typography>
-                    <Typography className='text'>
-                      <span className='highlight'>partner@hogme.life </span>
-                      (sponsorship/partnership)
-                    </Typography>
-                  </Box>
-                </Box>
-                <Box className='row'>
-                  <Typography className='heading'>
                     office
                   </Typography>
                   <Box>
                     <Typography className='text'>
-                      2 Dunstable RD, LutonLU1 1DX, UK.
+                      3 Germany Dr, Wilmington, DE 19804, USA.
                     </Typography>
                   </Box>
                 </Box>

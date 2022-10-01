@@ -112,7 +112,7 @@ const Footer = styled(Box)(({ theme }) => ({
 }))
 
 const BrandLogo = styled('img')(({theme}) => ({
-  width: 54
+  width: 69
 }))
 
 const Icon = styled('svg')(({theme}) => ({
@@ -197,29 +197,17 @@ export default function() {
                 marginLeft: 0
               }}
             >
-                <BrandLogo src="/logo/hog_logo_gold_titleless_w-50.png" />
-                <Typography 
-                    sx={{ 
-                        fontSize: '150%', 
-                        fontWeight: 700, 
-                        fontFamily: 'Product Sans!important', 
-                        color: '#fff',
-                        lineHeight: '85%',
-                        letterSpacing: -3,
-                        ml: -.5
-                    }}
-                >
-                  H<span style={{ fontSize: '130%', color: '#ead298' }}>O</span>G
-                </Typography>
+              <BrandLogo src="/logo/hog_logo_gold_titleless_w-100.png" />
             </a>
             <Typography className='text' sx={{ pr: '10%' }}>
-              Better health from hog.
-              An intentional different approach to care.
+              In our world of endless possibilities, 
+              compassion is first. 
+              Talk to us
             </Typography>
 
             <Box className='getApp' sx={{ py: 4 }}>
               <Typography className='sub-heading'>
-                DOWNLOAD THE <span className='highlight'> Hog-me app</span>
+                DOWNLOAD THE <span className='highlight'> Hogme app</span>
               </Typography>
               <Box className='links' sx={{ py: 1.5 }}>
                 <a href='#' className='link'>

@@ -2,7 +2,7 @@
 const services = [
   {
     name: "Cinema therapy",
-    image: '/img/services/young-happy-loving-couple-sitting-sofa-indoors-watching-tv_1800x1800.jpg',
+    image: '/img/services/young-happy-loving-couple-sitting-sofa-indoors-watching-happy-children-in-tv_1800x1800.jpg',
     text: `A form of therapy that uses movies, particularly videos, as therapeutic tools. 
       Cinema therapy can be a catalyst for healing and growth for those who are open to 
       learning how movies affect people and to watching certain films with conscious awareness. 

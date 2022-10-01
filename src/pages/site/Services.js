@@ -25,6 +25,7 @@ export default function() {
       <Hero
         image='/img/drug-prescription-treatment-medication.jpg'
         pageName='services'
+        pageNameClasses='bottom right'
       >
         <Box className='wrapper'>
           <Typography className='heading'> 
@@ -98,10 +99,10 @@ export default function() {
           </Grid>
           <Grid item className='col-text'>
             <Typography className='heading'>
-              Hog-me
+              Hogme
             </Typography>
             <Typography className='text' sx={{ px: 6 }}>
-              Hog-me is both an in-phone experience and out-of-the phone experience, 
+              Hogme is both an in-phone experience and out-of-the phone experience, 
               where patients are allowed to request for a call to speak to an empathetic 
               listener for a possible rant or issue they want to express. 
               While out-of-the phone experience is primarily focused on home care. 
@@ -126,7 +127,7 @@ export default function() {
           </Grid>
           <Grid item className='col-image2'>
             <Img 
-              src="/img/services/girl-showing-smartphone.jpg"
+              src="/img/services/girl-showing-smartphone-with-hogme-logo.jpg"
             />
           </Grid>
 

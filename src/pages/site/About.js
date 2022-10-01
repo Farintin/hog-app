@@ -36,6 +36,7 @@ export default function() {
       <Hero
         image='/img/robot-hand-is-holding-red-heart.jpg'
         pageName='about us'
+        pageNameClasses='bottom right'
       >
         <Box className='wrapper'>
           <Typography className='heading'> 

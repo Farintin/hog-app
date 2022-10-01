@@ -25,11 +25,12 @@ const Hero = styled(Box)(({theme}) => ({
         width: '100%',
         height: '100%',
         display: 'flex',
-        alignItems: 'flex-end',
-        justifyContent: 'right',
+        alignItems: 'center',
+        justifyContent: 'center',
         //opacity: .3,
         position: 'relative',
         '& .title': {
+            position: 'absolute',
             fontSize: '1000%',
             fontWeight: 700,
             //fontFamily: 'Product Sans!important',
@@ -37,7 +38,19 @@ const Hero = styled(Box)(({theme}) => ({
             color: '#fff',//'#e9e9e9',
             lineHeight: 1,
             padding: '36px 28px',
-            fontStyle: 'italic'
+            fontStyle: 'italic',
+            '&.top': {
+                top: 0,
+            },
+            '&.bottom': {
+                bottom: 0,
+            },
+            '&.left': {
+                left: 0,
+            },
+            '&.right': {
+                right: 0,
+            }
         }
     },
     '& > .wrapper': {
@@ -125,12 +138,16 @@ export default function (props) {
             ref={hero}
             className='hero'
             sx={{
-                backgroundImage: `radial-gradient(${alpha('#000', 0)} 40%, ${alpha('#4c2b84', .45)} 70%), 
+                backgroundImage: `radial-gradient(${alpha('#000', 0)} 40%, ${alpha('#4c2b84', .5)} 70%), 
                     url(${props.image})`,
             }}
         >
             <Box className='bg'>
-                <Typography className='title'>{props.pageName}</Typography>
+                <Typography 
+                    className={`title ${props.pageNameClasses ? props.pageNameClasses : null}`}
+                >
+                    {props.pageName}
+                </Typography>
             </Box>
 
             <Box className="wrapper">
