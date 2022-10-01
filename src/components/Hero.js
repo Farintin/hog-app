@@ -64,8 +64,7 @@ const Hero = styled(Box)(({theme}) => ({
         backgroundColor: `${alpha('#4c2b84', .78)}`
     },
     '& .content': {
-        padding: 16,
-        margin: '0 64px',
+        padding: '32px 64px',
         display: 'flex',
         flexDirection: 'column',
         '& > .wrapper': {
@@ -155,8 +154,8 @@ export default function (props) {
                     sx={{
                         height: 1,
                         display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: props.contentPosition ? props.contentPosition : 'flex-start'
+                        alignItems: props.alignContent ? props.alignContent : 'center',
+                        justifyContent: props.justifyContent ? props.justifyContent : 'flex-start'
                     }}
                 >
                     <Box

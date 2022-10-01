@@ -34,7 +34,8 @@ export default function() {
         image='/img/robot-handshake-human.jpg'
         pageName='contact'
         pageNameClasses='bottom left'
-        contentPosition='center'
+        justifyContent='flex-end'
+        alignContent='flex-end'
       >
         <Box className='wrapper'>
           <Typography className='heading'> 
